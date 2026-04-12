@@ -1,8 +1,8 @@
-var currentIndex = 0;
-var galleryImages = Array.from(document.querySelectorAll('.art-piece img'));
-var lightbox = document.getElementById('lightbox');
-var lightboxImg = document.getElementById('lightbox-img');
-var lastFocused = null;
+const galleryImages = Array.from(document.querySelectorAll('.art-piece img'));
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+let currentIndex = 0;
+let lastFocused = null;
 
 function openLightbox(img) {
     lastFocused = document.activeElement;
@@ -15,7 +15,7 @@ function openLightbox(img) {
 }
 
 function showImage(index) {
-    var img = galleryImages[index];
+    const img = galleryImages[index];
     lightboxImg.src = img.dataset.full || img.src;
     lightboxImg.alt = img.alt;
 }
@@ -32,15 +32,30 @@ function closeLightbox() {
     if (lastFocused) lastFocused.focus();
 }
 
-document.addEventListener('keydown', function(e) {
+// Image click → lightbox
+galleryImages.forEach((img) => {
+    img.closest('.art-button').addEventListener('click', () => openLightbox(img));
+});
+
+// Lightbox controls
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+});
+
+lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+lightbox.querySelector('.lightbox-prev').addEventListener('click', () => navigateLightbox(-1));
+lightbox.querySelector('.lightbox-next').addEventListener('click', () => navigateLightbox(1));
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('active')) return;
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') navigateLightbox(-1);
     if (e.key === 'ArrowRight') navigateLightbox(1);
     if (e.key === 'Tab') {
-        var focusable = lightbox.querySelectorAll('button');
-        var first = focusable[0];
-        var last = focusable[focusable.length - 1];
+        const focusable = lightbox.querySelectorAll('button');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
         if (e.shiftKey && document.activeElement === first) {
             e.preventDefault();
             last.focus();

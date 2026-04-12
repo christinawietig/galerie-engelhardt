@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie | Thilo Engelhardt</title>
+    <meta name="description" content="Die Otmar Alt Galerie von Thilo Engelhardt in Plankstadt. Zeitgenössische Kunst von Otmar Alt, Picasso, Murakami, Uecker und mehr.">
+    <link rel="preload" href="assets/fonts/cormorant-garamond/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter/inter-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/lightbox.js" defer></script>
+    <script src="assets/js/nav.js" defer></script>
 </head>
 <body>
 
@@ -28,7 +33,7 @@
     <main class="gallery-feed" id="galerie" aria-label="Kunstwerke">
 
         <article class="art-piece">
-            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
+            <button class="art-button">
                 <img src="assets/images/thumbs/Der versteckte Maulwurf.jpg" data-full="assets/images/Der versteckte Maulwurf.png" alt="Otmar Alt: Der versteckte Maulwurf, 1967. Bunte abstrakte Formen auf schwarzem Hintergrund.">
             </button>
             <div class="art-info">
@@ -39,8 +44,8 @@
         </article>
 
         <article class="art-piece">
-            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
-                <img src="assets/images/thumbs/ZwiegesprächmitRaben.jpg" data-full="assets/images/ZwiegesprächmitRaben.jpg" alt="Otmar Alt: Zwiegespräch mit Raben, 2012. Abstrakte Figur mit Rabe in kräftigen Farben.">
+            <button class="art-button">
+                <img loading="lazy" src="assets/images/thumbs/ZwiegesprächmitRaben.jpg" data-full="assets/images/ZwiegesprächmitRaben.jpg" alt="Otmar Alt: Zwiegespräch mit Raben, 2012. Abstrakte Figur mit Rabe in kräftigen Farben.">
             </button>
             <div class="art-info">
                 <span class="artist">Otmar Alt</span>
@@ -50,8 +55,8 @@
         </article>
 
         <article class="art-piece">
-            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
-                <img src="assets/images/thumbs/LEtreinte.jpg" data-full="assets/images/LEtreinte.jpg" alt="Pablo Picasso: L'Etreinte, 1971. Linienzeichnung zweier umarmender Figuren.">
+            <button class="art-button">
+                <img loading="lazy" src="assets/images/thumbs/LEtreinte.jpg" data-full="assets/images/LEtreinte.jpg" alt="Pablo Picasso: L'Etreinte, 1971. Linienzeichnung zweier umarmender Figuren.">
             </button>
             <div class="art-info">
                 <span class="artist">Pablo Picasso</span>
@@ -61,8 +66,8 @@
         </article>
 
         <article class="art-piece">
-            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
-                <img src="assets/images/thumbs/murakami.jpg" data-full="assets/images/murakami.png" alt="Takashi Murakami: Runder Print mit bunten Augen und Spiralen auf rosa Hintergrund.">
+            <button class="art-button">
+                <img loading="lazy" src="assets/images/thumbs/murakami.jpg" data-full="assets/images/murakami.png" alt="Takashi Murakami: Runder Print mit bunten Augen und Spiralen auf rosa Hintergrund.">
             </button>
             <div class="art-info">
                 <span class="artist">Takashi Murakami</span>
@@ -71,8 +76,8 @@
         </article>
 
         <article class="art-piece">
-            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
-                <img src="assets/images/thumbs/uecker.jpg" data-full="assets/images/uecker.png" alt="Günther Uecker: Weißes Nagelrelief mit erhabenen Punkten in wellenförmiger Anordnung.">
+            <button class="art-button">
+                <img loading="lazy" src="assets/images/thumbs/uecker.jpg" data-full="assets/images/uecker.png" alt="Günther Uecker: Weißes Nagelrelief mit erhabenen Punkten in wellenförmiger Anordnung.">
             </button>
             <div class="art-info">
                 <span class="artist">Günther Uecker</span>
@@ -81,8 +86,8 @@
         </article>
 
         <article class="art-piece">
-            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
-                <img src="assets/images/thumbs/Traumfänger.jpg" data-full="assets/images/Traumfänger.jpg" alt="Traumfänger: Bunte Collage mit abstrakter Tierfigur auf lila Hintergrund.">
+            <button class="art-button">
+                <img loading="lazy" src="assets/images/thumbs/Traumfänger.jpg" data-full="assets/images/Traumfänger.jpg" alt="Traumfänger: Bunte Collage mit abstrakter Tierfigur auf lila Hintergrund.">
             </button>
             <div class="art-info">
                 <span class="artist">Otmar Alt?</span>
@@ -92,8 +97,8 @@
         </article>
 
         <article class="art-piece">
-            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
-                <img src="assets/images/thumbs/repressione.jpg" data-full="assets/images/repressione.jpg" alt="Repressione: Expressive Szene mit Figurengruppe in kräftigen Farben.">
+            <button class="art-button">
+                <img loading="lazy" src="assets/images/thumbs/repressione.jpg" data-full="assets/images/repressione.jpg" alt="Repressione: Expressive Szene mit Figurengruppe in kräftigen Farben.">
             </button>
             <div class="art-info">
                 <span class="title">Repressione</span>
@@ -103,11 +108,11 @@
 
     </main>
 
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht" aria-hidden="true" onclick="closeLightbox()">
-        <button class="lightbox-close" aria-label="Schließen" onclick="event.stopPropagation(); closeLightbox()">&times;</button>
-        <button class="lightbox-prev" aria-label="Vorheriges Bild" onclick="event.stopPropagation(); navigateLightbox(-1)">&#8249;</button>
-        <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
-        <button class="lightbox-next" aria-label="Nächstes Bild" onclick="event.stopPropagation(); navigateLightbox(1)">&#8250;</button>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Schließen">&times;</button>
+        <button class="lightbox-prev" aria-label="Vorheriges Bild">&#8249;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="lightbox-next" aria-label="Nächstes Bild">&#8250;</button>
     </div>
 
     <footer id="kontakt" aria-label="Kontaktinformationen">
@@ -124,11 +129,10 @@
             <a href="https://x.com/galeriee" target="_blank" rel="noopener">@galeriee</a>
         </div>
         <nav class="legal" aria-label="Rechtliches">
-            <a href="#">Impressum</a> &middot; <a href="#">Datenschutz</a>
+            <a href="#">Impressum</a>
         </nav>
     </footer>
 
-    <script src="assets/js/lightbox.js"></script>
 
 </body>
 </html>
