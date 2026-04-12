@@ -49,6 +49,10 @@ galerie-engelhardt/
     └── images/                 # Kunstwerk-Bilder
 ```
 
+## Deployment
+- **GitHub Pages** auf `main` Branch: https://christinawietig.github.io/galerie-engelhardt/
+- Push auf `main` deployt automatisch
+
 ## Technische Entscheidungen
 - **Kein CDN** -- Fonts self-hosted wegen DSGVO
 - **Fonts:** Komplette @fontsource-Pakete lokal, nur benötigte Gewichte per @font-face eingebunden (300, 400)
