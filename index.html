@@ -26,7 +26,7 @@
     <main class="gallery-feed" id="galerie">
 
         <article class="art-piece">
-            <img src="assets/images/Der versteckte Maulwurf.png" alt="Otmar Alt - Der versteckte Maulwurf, 1967" onclick="openLightbox(this)">
+            <img src="assets/images/thumbs/Der versteckte Maulwurf.jpg" data-full="assets/images/Der versteckte Maulwurf.png" alt="Otmar Alt - Der versteckte Maulwurf, 1967" onclick="openLightbox(this)">
             <div class="art-info">
                 <div class="artist">Otmar Alt</div>
                 <div class="title">Der versteckte Maulwurf, 1967</div>
@@ -35,7 +35,7 @@
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/ZwiegesprächmitRaben.jpg" alt="Otmar Alt - Zwiegespräch mit Raben, 2012" onclick="openLightbox(this)">
+            <img src="assets/images/thumbs/ZwiegesprächmitRaben.jpg" data-full="assets/images/ZwiegesprächmitRaben.jpg" alt="Otmar Alt - Zwiegespräch mit Raben, 2012" onclick="openLightbox(this)">
             <div class="art-info">
                 <div class="artist">Otmar Alt</div>
                 <div class="title">Zwiegespräch mit Raben, 2012</div>
@@ -44,7 +44,7 @@
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/LEtreinte.jpg" alt="Pablo Picasso - L'Etreinte, 1971" onclick="openLightbox(this)">
+            <img src="assets/images/thumbs/LEtreinte.jpg" data-full="assets/images/LEtreinte.jpg" alt="Pablo Picasso - L'Etreinte, 1971" onclick="openLightbox(this)">
             <div class="art-info">
                 <div class="artist">Pablo Picasso</div>
                 <div class="title">L'Etreinte, 1971</div>
@@ -53,7 +53,7 @@
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/murakami.png" alt="Takashi Murakami" onclick="openLightbox(this)">
+            <img src="assets/images/thumbs/murakami.jpg" data-full="assets/images/murakami.png" alt="Takashi Murakami" onclick="openLightbox(this)">
             <div class="art-info">
                 <div class="artist">Takashi Murakami</div>
             </div>
@@ -61,7 +61,7 @@
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/uecker.png" alt="Günther Uecker - Nagelrelief" onclick="openLightbox(this)">
+            <img src="assets/images/thumbs/uecker.jpg" data-full="assets/images/uecker.png" alt="Günther Uecker - Nagelrelief" onclick="openLightbox(this)">
             <div class="art-info">
                 <div class="artist">Günther Uecker</div>
             </div>
@@ -69,7 +69,7 @@
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/Traumfänger.jpg" alt="Traumfänger" onclick="openLightbox(this)">
+            <img src="assets/images/thumbs/Traumfänger.jpg" data-full="assets/images/Traumfänger.jpg" alt="Traumfänger" onclick="openLightbox(this)">
             <div class="art-info">
                 <div class="artist">Otmar Alt?</div>
                 <div class="title">Traumfänger</div>
@@ -78,7 +78,7 @@
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/repressione.jpg" alt="Repressione" onclick="openLightbox(this)">
+            <img src="assets/images/thumbs/repressione.jpg" data-full="assets/images/repressione.jpg" alt="Repressione" onclick="openLightbox(this)">
             <div class="art-info">
                 <div class="title">Repressione</div>
             </div>
@@ -112,7 +112,7 @@
 
     <script>
         function openLightbox(img) {
-            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-img').src = img.dataset.full || img.src;
             document.getElementById('lightbox').classList.add('active');
             document.body.style.overflow = 'hidden';
         }

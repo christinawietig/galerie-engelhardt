@@ -53,6 +53,12 @@ galerie-engelhardt/
 - **GitHub Pages** auf `main` Branch: https://christinawietig.github.io/galerie-engelhardt/
 - Push auf `main` deployt automatisch
 
+## Thumbnails
+- Originale liegen in `assets/images/`, Thumbnails in `assets/images/thumbs/`
+- Feed zeigt Thumbs (max 800px breit, JPEG), Lightbox lädt Original
+- Generierung via `sharp` (npm): `for f in assets/images/*.{jpg,png}; do npx sharp-cli -i "$f" -o "assets/images/thumbs/$(basename "${f%.*}").jpg" resize 600 --withoutEnlargement; done`
+- Kein permanentes npm-Setup nötig -- einmal laufen lassen wenn neue Bilder dazukommen
+
 ## Technische Entscheidungen
 - **Kein CDN** -- Fonts self-hosted wegen DSGVO
 - **Fonts:** Komplette @fontsource-Pakete lokal, nur benötigte Gewichte per @font-face eingebunden (300, 400)
