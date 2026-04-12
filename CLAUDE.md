@@ -43,10 +43,14 @@ galerie-engelhardt/
 └── assets/
     ├── css/
     │   └── style.css           # Stylesheet mit @font-face (self-hosted)
+    ├── js/
+    │   └── lightbox.js         # Lightbox mit Vor/Zurück-Navigation
     ├── fonts/
     │   ├── cormorant-garamond/ # Vollständiger Font (alle Gewichte)
     │   └── inter/              # Vollständiger Font (alle Gewichte)
-    └── images/                 # Kunstwerk-Bilder
+    └── images/
+        ├── *.jpg/*.png         # Originale (für Lightbox)
+        └── thumbs/             # Vorschaubilder (für Feed)
 ```
 
 ## Deployment

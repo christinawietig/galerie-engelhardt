@@ -168,7 +168,9 @@ header .subtitle {
 }
 
 .art-piece img {
-    max-width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
     height: auto;
     box-shadow: 0 8px 40px rgba(0,0,0,0.4);
     transition: box-shadow 0.4s ease, transform 0.3s ease;
@@ -258,6 +260,29 @@ header .subtitle {
 }
 
 .lightbox-close:hover {
+    opacity: 0.6;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 201;
+    font-weight: 300;
+    padding: 20px;
+    transition: opacity 0.3s;
+    user-select: none;
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
     opacity: 0.6;
 }
 
