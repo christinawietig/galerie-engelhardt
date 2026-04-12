@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie | Thilo Engelhardt</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="brand">Galerie Engelhardt</div>
+        <div class="nav-links">
+            <a href="#galerie">Galerie</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Galerie</h1>
+        <p>Thilo Engelhardt</p>
+        <div class="divider"></div>
+        <p class="subtitle">Die Otmar Alt Galerie im World Wide Web</p>
+    </header>
+
+    <main class="gallery-feed" id="galerie">
+
+        <article class="art-piece">
+            <img src="assets/images/Der versteckte Maulwurf.png" alt="Otmar Alt - Der versteckte Maulwurf, 1967" onclick="openLightbox(this)">
+            <div class="art-info">
+                <div class="artist">Otmar Alt</div>
+                <div class="title">Der versteckte Maulwurf, 1967</div>
+            </div>
+            <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Der versteckte Maulwurf (Otmar Alt)" class="btn-inquiry">Interesse anfragen</a>
+        </article>
+
+        <article class="art-piece">
+            <img src="assets/images/ZwiegesprächmitRaben.jpg" alt="Otmar Alt - Zwiegespräch mit Raben, 2012" onclick="openLightbox(this)">
+            <div class="art-info">
+                <div class="artist">Otmar Alt</div>
+                <div class="title">Zwiegespräch mit Raben, 2012</div>
+            </div>
+            <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Zwiegespräch mit Raben (Otmar Alt)" class="btn-inquiry">Interesse anfragen</a>
+        </article>
+
+        <article class="art-piece">
+            <img src="assets/images/LEtreinte.jpg" alt="Pablo Picasso - L'Etreinte, 1971" onclick="openLightbox(this)">
+            <div class="art-info">
+                <div class="artist">Pablo Picasso</div>
+                <div class="title">L'Etreinte, 1971</div>
+            </div>
+            <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: L'Etreinte (Picasso)" class="btn-inquiry">Interesse anfragen</a>
+        </article>
+
+        <article class="art-piece">
+            <img src="assets/images/murakami.png" alt="Takashi Murakami" onclick="openLightbox(this)">
+            <div class="art-info">
+                <div class="artist">Takashi Murakami</div>
+            </div>
+            <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Murakami" class="btn-inquiry">Interesse anfragen</a>
+        </article>
+
+        <article class="art-piece">
+            <img src="assets/images/uecker.png" alt="Günther Uecker - Nagelrelief" onclick="openLightbox(this)">
+            <div class="art-info">
+                <div class="artist">Günther Uecker</div>
+            </div>
+            <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Uecker" class="btn-inquiry">Interesse anfragen</a>
+        </article>
+
+        <article class="art-piece">
+            <img src="assets/images/Traumfänger.jpg" alt="Traumfänger" onclick="openLightbox(this)">
+            <div class="art-info">
+                <div class="artist">Otmar Alt?</div>
+                <div class="title">Traumfänger</div>
+            </div>
+            <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Traumfänger" class="btn-inquiry">Interesse anfragen</a>
+        </article>
+
+        <article class="art-piece">
+            <img src="assets/images/repressione.jpg" alt="Repressione" onclick="openLightbox(this)">
+            <div class="art-info">
+                <div class="title">Repressione</div>
+            </div>
+            <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Repressione" class="btn-inquiry">Interesse anfragen</a>
+        </article>
+
+    </main>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Vollbild">
+    </div>
+
+    <footer id="kontakt">
+        <h3>Kontakt</h3>
+        <div class="contact-details">
+            <p><strong>Thilo Engelhardt</strong></p>
+            <p>Schuberstr. 2</p>
+            <p>68723 Plankstadt</p>
+            <p>Fon: <a href="tel:+4917622262539">0176 22262539</a></p>
+            <p>Mail: <a href="mailto:Thilo.engelhardt@galeriee.de">Thilo.engelhardt@galeriee.de</a></p>
+        </div>
+        <div class="social-links">
+            <a href="https://galeriee.de">galeriee.de</a>
+            <a href="https://x.com/galeriee" target="_blank" rel="noopener">@galeriee</a>
+        </div>
+        <div class="legal">
+            <a href="#">Impressum</a> &middot; <a href="#">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+</html>
