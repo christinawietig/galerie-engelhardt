@@ -8,7 +8,9 @@
 </head>
 <body>
 
-    <nav>
+    <a class="skip-link" href="#galerie">Zur Galerie springen</a>
+
+    <nav aria-label="Hauptnavigation">
         <div class="brand">Galerie Engelhardt</div>
         <div class="nav-links">
             <a href="#galerie">Galerie</a>
@@ -19,97 +21,111 @@
     <header>
         <h1>Galerie</h1>
         <p>Thilo Engelhardt</p>
-        <div class="divider"></div>
+        <div class="divider" aria-hidden="true"></div>
         <p class="subtitle">Die Otmar Alt Galerie im World Wide Web</p>
     </header>
 
-    <main class="gallery-feed" id="galerie">
+    <main class="gallery-feed" id="galerie" aria-label="Kunstwerke">
 
         <article class="art-piece">
-            <img src="assets/images/thumbs/Der versteckte Maulwurf.jpg" data-full="assets/images/Der versteckte Maulwurf.png" alt="Otmar Alt - Der versteckte Maulwurf, 1967" onclick="openLightbox(this)">
+            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
+                <img src="assets/images/thumbs/Der versteckte Maulwurf.jpg" data-full="assets/images/Der versteckte Maulwurf.png" alt="Otmar Alt: Der versteckte Maulwurf, 1967. Bunte abstrakte Formen auf schwarzem Hintergrund.">
+            </button>
             <div class="art-info">
-                <div class="artist">Otmar Alt</div>
-                <div class="title">Der versteckte Maulwurf, 1967</div>
+                <span class="artist">Otmar Alt</span>
+                <span class="title">Der versteckte Maulwurf, 1967</span>
             </div>
             <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Der versteckte Maulwurf (Otmar Alt)" class="btn-inquiry">Interesse anfragen</a>
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/thumbs/ZwiegesprächmitRaben.jpg" data-full="assets/images/ZwiegesprächmitRaben.jpg" alt="Otmar Alt - Zwiegespräch mit Raben, 2012" onclick="openLightbox(this)">
+            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
+                <img src="assets/images/thumbs/ZwiegesprächmitRaben.jpg" data-full="assets/images/ZwiegesprächmitRaben.jpg" alt="Otmar Alt: Zwiegespräch mit Raben, 2012. Abstrakte Figur mit Rabe in kräftigen Farben.">
+            </button>
             <div class="art-info">
-                <div class="artist">Otmar Alt</div>
-                <div class="title">Zwiegespräch mit Raben, 2012</div>
+                <span class="artist">Otmar Alt</span>
+                <span class="title">Zwiegespräch mit Raben, 2012</span>
             </div>
             <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Zwiegespräch mit Raben (Otmar Alt)" class="btn-inquiry">Interesse anfragen</a>
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/thumbs/LEtreinte.jpg" data-full="assets/images/LEtreinte.jpg" alt="Pablo Picasso - L'Etreinte, 1971" onclick="openLightbox(this)">
+            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
+                <img src="assets/images/thumbs/LEtreinte.jpg" data-full="assets/images/LEtreinte.jpg" alt="Pablo Picasso: L'Etreinte, 1971. Linienzeichnung zweier umarmender Figuren.">
+            </button>
             <div class="art-info">
-                <div class="artist">Pablo Picasso</div>
-                <div class="title">L'Etreinte, 1971</div>
+                <span class="artist">Pablo Picasso</span>
+                <span class="title">L'Etreinte, 1971</span>
             </div>
             <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: L'Etreinte (Picasso)" class="btn-inquiry">Interesse anfragen</a>
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/thumbs/murakami.jpg" data-full="assets/images/murakami.png" alt="Takashi Murakami" onclick="openLightbox(this)">
+            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
+                <img src="assets/images/thumbs/murakami.jpg" data-full="assets/images/murakami.png" alt="Takashi Murakami: Runder Print mit bunten Augen und Spiralen auf rosa Hintergrund.">
+            </button>
             <div class="art-info">
-                <div class="artist">Takashi Murakami</div>
+                <span class="artist">Takashi Murakami</span>
             </div>
             <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Murakami" class="btn-inquiry">Interesse anfragen</a>
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/thumbs/uecker.jpg" data-full="assets/images/uecker.png" alt="Günther Uecker - Nagelrelief" onclick="openLightbox(this)">
+            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
+                <img src="assets/images/thumbs/uecker.jpg" data-full="assets/images/uecker.png" alt="Günther Uecker: Weißes Nagelrelief mit erhabenen Punkten in wellenförmiger Anordnung.">
+            </button>
             <div class="art-info">
-                <div class="artist">Günther Uecker</div>
+                <span class="artist">Günther Uecker</span>
             </div>
             <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Uecker" class="btn-inquiry">Interesse anfragen</a>
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/thumbs/Traumfänger.jpg" data-full="assets/images/Traumfänger.jpg" alt="Traumfänger" onclick="openLightbox(this)">
+            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
+                <img src="assets/images/thumbs/Traumfänger.jpg" data-full="assets/images/Traumfänger.jpg" alt="Traumfänger: Bunte Collage mit abstrakter Tierfigur auf lila Hintergrund.">
+            </button>
             <div class="art-info">
-                <div class="artist">Otmar Alt?</div>
-                <div class="title">Traumfänger</div>
+                <span class="artist">Otmar Alt?</span>
+                <span class="title">Traumfänger</span>
             </div>
             <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Traumfänger" class="btn-inquiry">Interesse anfragen</a>
         </article>
 
         <article class="art-piece">
-            <img src="assets/images/thumbs/repressione.jpg" data-full="assets/images/repressione.jpg" alt="Repressione" onclick="openLightbox(this)">
+            <button class="art-button" onclick="openLightbox(this.querySelector('img'))">
+                <img src="assets/images/thumbs/repressione.jpg" data-full="assets/images/repressione.jpg" alt="Repressione: Expressive Szene mit Figurengruppe in kräftigen Farben.">
+            </button>
             <div class="art-info">
-                <div class="title">Repressione</div>
+                <span class="title">Repressione</span>
             </div>
             <a href="mailto:Thilo.engelhardt@galeriee.de?subject=Anfrage: Repressione" class="btn-inquiry">Interesse anfragen</a>
         </article>
 
     </main>
 
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <span class="lightbox-prev" onclick="event.stopPropagation(); navigateLightbox(-1)">&#8249;</span>
-        <img id="lightbox-img" src="" alt="Vollbild" onclick="event.stopPropagation()">
-        <span class="lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">&#8250;</span>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht" aria-hidden="true" onclick="closeLightbox()">
+        <button class="lightbox-close" aria-label="Schließen" onclick="event.stopPropagation(); closeLightbox()">&times;</button>
+        <button class="lightbox-prev" aria-label="Vorheriges Bild" onclick="event.stopPropagation(); navigateLightbox(-1)">&#8249;</button>
+        <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+        <button class="lightbox-next" aria-label="Nächstes Bild" onclick="event.stopPropagation(); navigateLightbox(1)">&#8250;</button>
     </div>
 
-    <footer id="kontakt">
-        <h3>Kontakt</h3>
-        <div class="contact-details">
+    <footer id="kontakt" aria-label="Kontaktinformationen">
+        <h2>Kontakt</h2>
+        <address class="contact-details">
             <p><strong>Thilo Engelhardt</strong></p>
             <p>Schuberstr. 2</p>
             <p>68723 Plankstadt</p>
             <p>Fon: <a href="tel:+4917622262539">0176 22262539</a></p>
             <p>Mail: <a href="mailto:Thilo.engelhardt@galeriee.de">Thilo.engelhardt@galeriee.de</a></p>
-        </div>
+        </address>
         <div class="social-links">
             <a href="https://galeriee.de">galeriee.de</a>
             <a href="https://x.com/galeriee" target="_blank" rel="noopener">@galeriee</a>
         </div>
-        <div class="legal">
+        <nav class="legal" aria-label="Rechtliches">
             <a href="#">Impressum</a> &middot; <a href="#">Datenschutz</a>
-        </div>
+        </nav>
     </footer>
 
     <script src="assets/js/lightbox.js"></script>

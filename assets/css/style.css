@@ -39,6 +39,24 @@
     src: url('../fonts/inter/inter-latin-400-normal.woff2') format('woff2');
 }
 
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #0a0a0a;
+    padding: 8px 16px;
+    z-index: 300;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
 /* Reset */
 *, *::before, *::after {
     margin: 0;
@@ -201,6 +219,20 @@ header .subtitle {
     margin-top: 4px;
 }
 
+.art-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.art-button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
 .btn-inquiry {
     display: inline-block;
     margin-top: 18px;
@@ -256,6 +288,8 @@ header .subtitle {
     cursor: pointer;
     z-index: 201;
     font-weight: 300;
+    background: none;
+    border: none;
     transition: opacity 0.3s;
 }
 
@@ -274,6 +308,8 @@ header .subtitle {
     z-index: 201;
     font-weight: 300;
     padding: 20px;
+    background: none;
+    border: none;
     transition: opacity 0.3s;
     user-select: none;
 }
@@ -286,6 +322,11 @@ header .subtitle {
     opacity: 0.6;
 }
 
+.lightbox button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
 /* Footer / Contact */
 footer {
     background: #050505;
@@ -294,13 +335,17 @@ footer {
     text-align: center;
 }
 
-footer h3 {
+footer h2 {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 1.4rem;
     font-weight: 300;
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 25px;
+}
+
+.contact-details {
+    font-style: normal;
 }
 
 .contact-details p {
