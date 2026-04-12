@@ -70,11 +70,21 @@ galerie-engelhardt/
 
 ## Features
 - Sticky Navigation mit Blur-Effekt
-- Lightbox (Klick auf Bild = Vollbild, Escape zum Schließen)
+- Lightbox mit Vor/Zurück-Navigation (Klick, Pfeiltasten, Escape)
 - Fade-in Animationen beim Laden
 - mailto-Links mit vorausgefülltem Betreff pro Kunstwerk
 - Responsive Design (Mobile-optimiert)
 - Impressum/Datenschutz-Links vorbereitet (noch Platzhalter)
+
+## Accessibility
+- Landmarks: nav, header, main, footer mit aria-labels
+- Skip-Link zur Galerie
+- Lightbox: role=dialog, aria-modal, Fokus-Trap, Fokus-Rückgabe
+- Bilder in Buttons für Tastatur-Bedienbarkeit
+- Beschreibende alt-Texte für alle Kunstwerke
+- Korrekte Heading-Hierarchie (h1 → h2)
+- focus-visible Outlines
+- address-Element für Kontaktdaten
 
 
 ## Kontext
