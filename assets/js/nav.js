@@ -3,6 +3,6 @@ const header = document.querySelector('header');
 
 const observer = new IntersectionObserver((entries) => {
     nav.classList.toggle('visible', !entries[0].isIntersecting);
-}, { threshold: 0 });
+}, { threshold: 0.5 });
 
 observer.observe(header);
