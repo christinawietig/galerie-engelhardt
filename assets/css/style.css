@@ -386,23 +386,6 @@ footer h2 {
     opacity: 0.6;
 }
 
-.legal {
-    margin-top: 50px;
-    font-size: 0.7rem;
-    color: #aaa;
-    letter-spacing: 1px;
-}
-
-.legal a {
-    color: #aaa;
-    text-decoration: none;
-    margin: 0 8px;
-}
-
-.legal a:hover {
-    color: #ccc;
-}
-
 /* Responsive */
 @media (max-width: 600px) {
     header h1 {
