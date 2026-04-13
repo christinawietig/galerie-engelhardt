@@ -174,17 +174,17 @@ header .subtitle {
 
 /* Intro */
 .intro {
-    max-width: 640px;
+    max-width: 720px;
     margin: 0 auto 160px auto;
     padding: 0 20px;
-    text-align: justify;
-    hyphens: auto;
     color: var(--color-text-muted);
     font-size: 0.95rem;
     line-height: 1.8;
 }
 
 .intro p {
+    text-align: justify;
+    hyphens: auto;
     margin-bottom: 1.2em;
 }
 
