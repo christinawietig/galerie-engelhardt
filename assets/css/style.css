@@ -188,6 +188,11 @@ header .subtitle {
     margin-bottom: 1.2em;
 }
 
+.intro p.intro-closing {
+    margin-top: 2.5em;
+    text-align: center;
+}
+
 .intro p:last-child {
     margin-bottom: 0;
 }
