@@ -261,13 +261,6 @@ header .subtitle {
     margin-top: 2px;
 }
 
-.art-info .price {
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    margin-top: 10px;
-    letter-spacing: 0.5px;
-}
-
 .art-button {
     background: none;
     border: none;
