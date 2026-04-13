@@ -134,7 +134,7 @@ nav[aria-label="Hauptnavigation"] .nav-links a:hover {
 
 /* Header */
 header {
-    padding: 100px 20px 80px 20px;
+    padding: 100px 20px 30px 20px;
     text-align: center;
 }
 
@@ -175,7 +175,7 @@ header .subtitle {
 /* Intro */
 .intro {
     max-width: 640px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 160px auto;
     padding: 0 20px;
     text-align: center;
     color: var(--color-text-muted);
@@ -207,7 +207,7 @@ header .subtitle {
     max-width: 860px;
     width: 100%;
     margin: 0 auto;
-    padding: 40px 20px 80px 20px;
+    padding: 10px 20px 80px 20px;
 }
 
 .art-piece {
