@@ -79,6 +79,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
 }
 
 body {
@@ -219,6 +220,8 @@ header .subtitle {
 .art-piece {
     margin-bottom: 100px;
     text-align: center;
+    scroll-snap-align: center;
+    scroll-margin-block: 60px;
 }
 
 .art-piece img {
