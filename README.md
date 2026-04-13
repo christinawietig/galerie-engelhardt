@@ -1,5 +1,5 @@
-# Galerie Engelhardt
+# GalerieE
 
-Website für die Otmar Alt Galerie von Thilo Engelhardt in Plankstadt.
+Website der GalerieE in Plankstadt mit Schwerpunkt Otmar Alt.
 
 **Live:** https://christinawietig.github.io/galerie-engelhardt/

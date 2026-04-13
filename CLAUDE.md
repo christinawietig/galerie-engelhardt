@@ -1,12 +1,12 @@
-# Galerie Engelhardt - Website
+# GalerieE - Website
 
 > **Wichtig:** Diese CLAUDE.md ist die zentrale Projektdokumentation und muss bei jeder
 > Änderung am Projekt aktuell gehalten werden (Struktur, Entscheidungen).
 > **Keine sensiblen oder internen Inhalte** -- nur dokumentieren, was auch öffentlich sein darf.
 
-## Auftraggeber
-- **Name:** Thilo Engelhardt
-- **Galerie:** Die Otmar Alt Galerie
+## Galerie
+- **Name:** GalerieE
+- **Schwerpunkt:** Otmar Alt
 - **Domain:** galeriee.de
 - **X/Twitter:** @galeriee
 
@@ -26,7 +26,7 @@
 - **Bilder:** Sollen austauschbar sein (einfach hochladen/löschen)
 
 ## Aktuelle Kunstwerke (assets/images/)
-Beispielbilder. Zuordnungen per Web-Recherche, mit ? wo unsicher -- Thilo muss bestätigen.
+Beispielbilder. Zuordnungen per Web-Recherche, mit ? wo unsicher -- noch zu bestätigen.
 1. `Der versteckte Maulwurf.png` - Otmar Alt, 1967, Öl auf Leinwand
 2. `ZwiegesprächmitRaben.jpg` - Otmar Alt, 2012 (Signatur im Bild)
 3. `LEtreinte.jpg` - Pablo Picasso, 1971, Linogravure
@@ -88,4 +88,4 @@ galerie-engelhardt/
 
 
 ## Kontext
-Website für die Otmar Alt Galerie von Thilo Engelhardt in Plankstadt.
+Website der GalerieE in Plankstadt mit Schwerpunkt Otmar Alt.
