@@ -177,7 +177,8 @@ header .subtitle {
     max-width: 640px;
     margin: 0 auto 160px auto;
     padding: 0 20px;
-    text-align: center;
+    text-align: justify;
+    hyphens: auto;
     color: var(--color-text-muted);
     font-size: 0.95rem;
     line-height: 1.8;
