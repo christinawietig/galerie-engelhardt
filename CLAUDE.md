@@ -26,14 +26,14 @@
 - **Bilder:** Sollen austauschbar sein (einfach hochladen/löschen)
 
 ## Aktuelle Kunstwerke (assets/images/)
-Beispielbilder. Zuordnungen per Web-Recherche, mit ? wo unsicher -- noch zu bestätigen.
-1. `Der versteckte Maulwurf.png` - Otmar Alt, 1967, Öl auf Leinwand
-2. `ZwiegesprächmitRaben.jpg` - Otmar Alt, 2012 (Signatur im Bild)
-3. `LEtreinte.jpg` - Pablo Picasso, 1971, Linogravure
-4. `murakami.png` - Takashi Murakami, "Eye Love Superflat (Pink)"?, 2003?, Screenprint
-5. `uecker.png` - Günther Uecker, Prägedruck/Nagelrelief
-6. `Traumfänger.jpg` - Otmar Alt?
-7. `repressione.jpg` - Künstler unbekannt
+Daten verifiziert aus GalerieE.docx.
+1. `Der versteckte Maulwurf.png` - Otmar Alt, 1967, Öl auf Leinwand, 139×94,5 cm, Preis auf Anfrage
+2. `ZwiegesprächmitRaben.jpg` - Otmar Alt, 2012, Acryl auf Leinwand, 140×110 cm, 16.000 €
+3. `LEtreinte.jpg` - Pablo Picasso, 1963, L'Etreinte I, Linolschnitt, 54×65 cm, 26/50 (Bloch 1150)
+4. `murakami.png` - Takashi Murakami, "We are the Jocular Clan", Offsetdruck, 95/300, 1.500 €
+5. `uecker.png` - Günther Uecker, 2002, signierter Prägedruck "Graphein", 70×50 cm, 77/120
+6. `Traumfänger.jpg` - Otmar Alt, 1975, Radierung, 76×66 cm, 67/75, 500 €
+7. `repressione.jpg` - José Ortega, Repressione, Prägeradierung, 69×70 cm, 1/75, 450 €
 
 ## Dateistruktur
 ```
