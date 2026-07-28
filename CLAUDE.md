@@ -45,6 +45,9 @@ galerie-engelhardt/
 ├── index.html
 ├── CLAUDE.md
 └── assets/
+    ├── favicon.svg              # Favicon (SVG, dunkler Hintergrund + "E")
+    ├── favicon-32.png           # Favicon-Fallback für Browser ohne SVG-Support
+    ├── favicon-180.png          # Apple Touch Icon
     ├── css/
     │   └── style.css           # Stylesheet mit @font-face (self-hosted)
     ├── js/
@@ -60,6 +63,8 @@ galerie-engelhardt/
 ## Deployment
 - **GitHub Pages** auf `main` Branch: https://christinawietig.github.io/galerie-engelhardt/
 - Push auf `main` deployt automatisch
+- **Produktiv-Domain** galeriee.de läuft auf separatem Webspace (1&1/IONOS, SFTP) --
+  Upload dorthin aktuell manuell, kein automatischer Sync von GitHub Pages zu dieser Domain
 
 ## Thumbnails
 - Originale liegen in `assets/images/`, Thumbnails in `assets/images/thumbs/`
@@ -79,6 +84,9 @@ galerie-engelhardt/
 - mailto-Links mit vorausgefülltem Betreff pro Kunstwerk
 - Responsive Design (Mobile-optimiert)
 - Impressum/Datenschutz-Links vorbereitet (noch Platzhalter)
+- Favicon (SVG + PNG-Fallback + Apple Touch Icon)
+- SEO: Meta-Description, canonical Link, Open Graph & Twitter-Card-Tags
+- JSON-LD (schema.org `ArtGallery`) für strukturierte Daten
 
 ## Accessibility
 - Landmarks: nav, header, main, footer mit aria-labels
