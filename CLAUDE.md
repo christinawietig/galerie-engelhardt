@@ -27,13 +27,13 @@
 
 ## Aktuelle Kunstwerke (assets/images/)
 Daten verifiziert aus GalerieE.docx. Preise bewusst nicht auf der Website.
-1. `der-versteckte-maulwurf.png` - Otmar Alt, 1967, Öl auf Leinwand, 139×94,5 cm
-2. `zwiegespraech-mit-raben.jpg` - Otmar Alt, 2012, Acryl auf Leinwand, 140×110 cm
-3. `letreinte.jpg` - Pablo Picasso, 1963, L'Etreinte I, Linolschnitt, 54×65 cm, 26/50 (Bloch 1150)
-4. `murakami.png` - Takashi Murakami, "We are the Jocular Clan", Offsetdruck, 95/300
-5. `uecker.png` - Günther Uecker, 2002, signierter Prägedruck "Graphein", 70×50 cm, 77/120
-6. `traumfaenger.jpg` - Otmar Alt, 1975, Radierung, 76×66 cm, 67/75
-7. `repressione.jpg` - José Ortega, Repressione, Prägeradierung, 69×70 cm, 1/75
+1. `der-versteckte-maulwurf.webp` - Otmar Alt, 1967, Öl auf Leinwand, 139×94,5 cm
+2. `zwiegespraech-mit-raben.webp` - Otmar Alt, 2012, Acryl auf Leinwand, 140×110 cm
+3. `letreinte.webp` - Pablo Picasso, 1963, L'Etreinte I, Linolschnitt, 54×65 cm, 26/50 (Bloch 1150)
+4. `murakami.webp` - Takashi Murakami, "We are the Jocular Clan", Offsetdruck, 95/300
+5. `uecker.webp` - Günther Uecker, 2002, signierter Prägedruck "Graphein", 70×50 cm, 77/120
+6. `traumfaenger.webp` - Otmar Alt, 1975, Radierung, 76×66 cm, 67/75
+7. `repressione.webp` - José Ortega, Repressione, Prägeradierung, 69×70 cm, 1/75
 
 Dateinamen: Nur ASCII-Kleinbuchstaben, Ziffern und `-`, keine Umlaute/Leerzeichen (Grund: macOS
 normalisiert Umlaute in Dateinamen anders als der Linux-Server von GitHub Pages, was zu 404s
@@ -56,8 +56,8 @@ galerie-engelhardt/
     │   ├── cormorant-garamond/ # Vollständiger Font (alle Gewichte)
     │   └── inter/              # Vollständiger Font (alle Gewichte)
     └── images/
-        ├── *.jpg/*.png         # Originale (für Lightbox)
-        └── thumbs/             # Vorschaubilder (für Feed)
+        ├── *.webp              # Originale, max. 2000px lange Seite (für Lightbox)
+        └── thumbs/             # Vorschaubilder, max. 800px hoch (für Feed)
 ```
 
 ## Deployment
@@ -68,8 +68,13 @@ galerie-engelhardt/
 
 ## Thumbnails
 - Originale liegen in `assets/images/`, Thumbnails in `assets/images/thumbs/`
-- Feed zeigt Thumbs (max 800px breit, JPEG), Lightbox lädt Original
-- Generierung via `sharp` (npm): `for f in assets/images/*.{jpg,png}; do npx sharp-cli -i "$f" -o "assets/images/thumbs/$(basename "${f%.*}").jpg" resize 600 --withoutEnlargement; done`
+- Feed zeigt Thumbs, Lightbox lädt Original -- beide als WebP (kleinere Dateigröße bei
+  gleicher Bildqualität als JPEG/PNG, seit Lighthouse-Audit auf mobile umgestellt)
+- Bei neuen Bildern (Quelldatei kann jpg/png/webp sein) beide Größen erzeugen:
+  - Original für Lightbox, lange Seite auf max. 2000px begrenzt:
+    `npx sharp-cli -i "quelle.jpg" -o "assets/images/name.webp" resize 2000 2000 --fit inside --withoutEnlargement -f webp -q 82`
+  - Thumbnail für den Feed, Höhe auf max. 800px begrenzt:
+    `npx sharp-cli -i "quelle.jpg" -o "assets/images/thumbs/name.webp" resize --height 800 --fit inside --withoutEnlargement -f webp -q 78`
 - Kein permanentes npm-Setup nötig -- einmal laufen lassen wenn neue Bilder dazukommen
 
 ## Technische Entscheidungen
