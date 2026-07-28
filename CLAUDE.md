@@ -27,13 +27,17 @@
 
 ## Aktuelle Kunstwerke (assets/images/)
 Daten verifiziert aus GalerieE.docx. Preise bewusst nicht auf der Website.
-1. `Der versteckte Maulwurf.png` - Otmar Alt, 1967, Öl auf Leinwand, 139×94,5 cm
-2. `ZwiegesprächmitRaben.jpg` - Otmar Alt, 2012, Acryl auf Leinwand, 140×110 cm
-3. `LEtreinte.jpg` - Pablo Picasso, 1963, L'Etreinte I, Linolschnitt, 54×65 cm, 26/50 (Bloch 1150)
+1. `der-versteckte-maulwurf.png` - Otmar Alt, 1967, Öl auf Leinwand, 139×94,5 cm
+2. `zwiegespraech-mit-raben.jpg` - Otmar Alt, 2012, Acryl auf Leinwand, 140×110 cm
+3. `letreinte.jpg` - Pablo Picasso, 1963, L'Etreinte I, Linolschnitt, 54×65 cm, 26/50 (Bloch 1150)
 4. `murakami.png` - Takashi Murakami, "We are the Jocular Clan", Offsetdruck, 95/300
 5. `uecker.png` - Günther Uecker, 2002, signierter Prägedruck "Graphein", 70×50 cm, 77/120
-6. `Traumfänger.jpg` - Otmar Alt, 1975, Radierung, 76×66 cm, 67/75
+6. `traumfaenger.jpg` - Otmar Alt, 1975, Radierung, 76×66 cm, 67/75
 7. `repressione.jpg` - José Ortega, Repressione, Prägeradierung, 69×70 cm, 1/75
+
+Dateinamen: Nur ASCII-Kleinbuchstaben, Ziffern und `-`, keine Umlaute/Leerzeichen (Grund: macOS
+normalisiert Umlaute in Dateinamen anders als der Linux-Server von GitHub Pages, was zu 404s
+bei Bildern führte).
 
 ## Dateistruktur
 ```
